@@ -1,0 +1,1 @@
+"c:\Program Files\MSBuild\Microsoft.Cpp\v4.0\Microsoft.Cpp.UpgradeFromVC60.props"

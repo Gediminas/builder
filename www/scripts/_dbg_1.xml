@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<build_script>
+
+<name>
+__DEBUG
+</name>
+
+<mutex>
+
+</mutex>
+
+<comment>
+
+</comment>
+
+<mail_list>
+g.luzys@matrix-software.lt
+</mail_list>
+
+<script>
+//---------- GIT -----------------------
+
+//GIT:getClean('W35sp4')
+//> REM GIT: Get submodules
+//> sh @root@/get_submodules.sh --clean --quiet
+
+> REM ~GIT: Log
+> cmd /c git log -1000 --no-merges --date=iso --pretty=format:"%%H | %%ad | %%an | %%s" > @temp@/git.log
+> cmd /c git log -1000 --no-merges --date=iso --pretty=format:"%%H | %%ad | %%an | %%s"
+FileCopy('@temp@/git.log', '@temp@/distr/git.log')
+FileCopy('@temp@/git.log', '@client_data@/git_log/@timestamp@_git.log')
+
+//---------- BUILD ---------------------
+
+//BuildCMake('build\wood.cfg', 'Visual Studio 15 2017', '@root@')
+//BuildCMake('build\_libraries.cfg', 'Visual Studio 15 2017', '@root@')
+
+//PHP('@root@/Language/bin/CompileMo.php', '@root@\Language\EN');
+//PHP('@root@/Language/bin/CompileMo.php', '@root@\Language\NL');
+
+SetEnv('ide_vc17')
+//BuildCfg('build\_wx.cfg',        'DLL Release')
+//BuildCfg('build\_libraries.cfg', 'Release')
+//BuildCfg('build\wood.cfg',       'Release')
+
+
+</script>
+
+</build_script>

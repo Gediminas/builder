@@ -1,0 +1,1 @@
+@build libraries Debug

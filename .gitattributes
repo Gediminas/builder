@@ -1,0 +1,6 @@
+*.pdb binary
+*.dll binary
+*.exe binary
+*.lib binary
+*.mdb binary
+*.lng binary 

@@ -1,0 +1,22 @@
+verpatch r6 (2009/07/17)
+Usage: verpatch filename [version] [/options]
+
+Options:
+
+ /s name "value" - add/replace any version resource string
+ /sc "comment" - add Comments string (same as /s comment "comment")
+ /va - create the version resource (use when the file has no version info)
+ /pv <version> - specify Product version
+ /fn - preserve Original filename, Internal name in the file version info
+ /vo - output the file version info in RC format
+ /xi - test mode, does not modify the file
+ /vft2 num - specify driver type (VFT2_xxx values defined in winver.h)
+ /rpdb - remove path to .pdb in debug information
+ /rf #hex-id file - add a resource from file (see readme)
+
+
+Examples:
+  verpatch d:\foo.dll 1.2.33.44 /sc "holy cow, it works!"
+  verpatch d:\foo_copy.sys "33.44 released on %date%" /fn
+  verpatch d:\foo.exe /va 1.2.3.4
+  verpatch d:\foo.exe 1.2.3.4 /rf #9 embedded-driver.sys

@@ -1,0 +1,17 @@
+.url_main
+{
+	display:inline-block;
+	color: black;
+}
+
+.url_params
+{
+	display:inline-block;
+	color: gray;
+}
+
+.url_main:link {text-decoration:none;}
+.url_main:visited {text-decoration:none;}
+.url_main:hover {text-decoration:underline;}
+.url_main:active {text-decoration:underline;}
+

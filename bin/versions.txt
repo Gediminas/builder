@@ -1,0 +1,2 @@
+apache 32-bit 2.4.34
+php    32-bit 5.5.3

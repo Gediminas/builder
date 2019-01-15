@@ -1,0 +1,76 @@
+#######################################
+# BLOCK ALL:
+
+*.*
+
+#######################################
+# BUT ALLOW:
+
+# C++
+!*.cpp
+!*.h
+!*.dsp
+!*.dsw
+
+# Web
+!*.php
+!*.php_
+!*.so
+!*.gif
+!*.jpg
+!*.ico
+!*.png
+
+# shell
+!*.cmd
+!*.sh
+!*.bash
+
+# executable
+!*.exe
+!*.dll
+
+# archive
+!*.zip
+!*.7z
+
+# cmake
+!*local/CMake/share/*
+!*.rst
+!*.cmake
+!*.c
+!*.el
+!*.cxx
+!*.vim
+!*.in
+
+# other
+!*.lng
+!*.cfg
+!*.ini
+!*.xsl
+!*.xml
+!*.txt
+!*.css
+!*.js
+
+# git based files
+!.gitignore
+!.gitattributes
+!master
+
+
+#######################################
+# AND FORCE BLOCK:
+
+# files
+
+php_generated_cmd.cmd
+mxk_builder.s3db 
+conf.php
+php/conf/conf.php
+/local/temp/
+
+
+
+

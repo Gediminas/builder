@@ -1,0 +1,61 @@
+<?php
+    //used only here - can be deleted
+
+	$conf_dir    = dirname(__FILE__);
+
+	$working_dir = realpath("$conf_dir\..\..\..");
+	$builder_dir = realpath("$conf_dir\..\..");
+
+	$shr_dir     = "$working_dir\\_dat";
+	$www_dir     = "$builder_dir\\www";
+ 
+    //used globally - must exist
+
+	$version                 = "4.0";
+	$host                    = php_uname("n");
+	$default_TTL             = 20*60; //time-to-live for child process called by run_process()
+	$worker_count            = 1;
+	$product_storage_count   = 2;
+	$product_log_storage_count = 10;
+	$LogTestShow             = 15;
+	$debug_dir_name          = '_DEBUG';
+	$autoscroll              = 0;
+	$night_start             = '01:00';
+	$night_end               = '07:00';
+
+	$src_dir                 = "$working_dir";
+	$tmp_dir                 = "$working_dir\\_dat";
+
+	$client_data_dir         = $tmp_dir . "\\client_data";
+	$product_dir             = "$tmp_dir\\product";
+
+	$db_jobs_path            = "$tmp_dir\\builder-jobs.s3db";
+	$db_params_path          = "$tmp_dir\\builder-params.s3db";
+
+	$db_history_path         = "$shr_dir\\builder-history.s3db";
+	$autotester_results_path = "$shr_dir\\builder-autotester.s3db";//old
+	$autotester_db_path      = "$shr_dir\\builder-AT.s3db"; //new
+
+	$php_log                 = "$www_dir\\php_errors.log"; //relative to php file location, should be /www/
+	$httpd_pid               = "$www_dir\\httpd.pid";
+	$httpd_log               = "$www_dir\\httpd.log";
+	$access_log              = "$www_dir\\access.log";
+
+	//debug - optional
+	//$debug['manual_proc_start']   = true;
+
+	//settings - optional
+	$setting['simple_mail_subject'] = 0; // 0 - full, 1 - simple
+	
+	//levels - optional
+	//0 - minimal (init & errors only), 1 - normal, 2 - strict)
+	$loglevel['info']   = 1;
+	$loglevel['daemon'] = 1;
+	$loglevel['db']     = 0;
+	$loglevel['locks']  = 0;
+ 
+	$_system_dll = 'KERNEL32.dll MSVCRT.dll comdlg32.dll ole32.dll COMCTL32.dll SHELL32.dll OLEAUT32.dll ADVAPI32.dll USER32.dll GDI32.dll '.
+		'MFC42.DLL MSVCP60.dll WINSPOOL.DRV WS2_32.dll oledlg.dll ODBC32.dll WINMM.dll RPCRT4.dll CRPE32.dll SHLWAPI.dll MSIMG32.dll WSOCK32.dll GDIPLUS.dll ATL.DLL MSCOREE.DLL UXTHEME.DLL';
+
+	$hr = "--------------------------------"; 
+?>
